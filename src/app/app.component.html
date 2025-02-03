@@ -12,31 +12,34 @@
   </div>
 
   <div class="answers">
-    <div class="answer-box" [ngClass]="className().key === 'cdk-drop-list-1' ? className().value : ''">
-      <h2> Кто? Что? </h2>
-
-      <div
-        cdkDropList
-        [cdkDropListData]="box1"
-        class="example-list"
-        (cdkDropListDropped)="drop($event)">
-        @for (item of box1; track item) {
-          <div class="answer-box_text">{{ item.q }}</div>
-        }
+    <div class="answers-container">
+      <h2 class="title"> Кто? Что? </h2>
+      <div class="answer-box" [ngClass]="className().key === 'cdk-drop-list-1' ? className().value : ''">
+        <div
+          cdkDropList
+          [cdkDropListData]="box1"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          @for (item of box1; track item) {
+            <div class="answer-box_text">{{ item.q }}</div>
+          }
+        </div>
       </div>
     </div>
 
-    <div class="answer-box" [ngClass]="className().key === 'cdk-drop-list-2' ? className().value : ''">
-      <h2> Какой? Какая? Какое? Какие? </h2>
+    <div class="answers-container">
+      <h2 class="title"> Какой? Какая? Какое? Какие? </h2>
 
-      <div
-        cdkDropList
-        [cdkDropListData]="box2"
-        class="example-list"
-        (cdkDropListDropped)="drop($event)">
-        @for (item of box2; track item) {
-          <div class="answer-box_text">{{ item.q}}</div>
-        }
+      <div class="answer-box" [ngClass]="className().key === 'cdk-drop-list-2' ? className().value : ''">
+        <div
+          cdkDropList
+          [cdkDropListData]="box2"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          @for (item of box2; track item) {
+            <div class="answer-box_text">{{ item.q}}</div>
+          }
+        </div>
       </div>
     </div>
   </div>

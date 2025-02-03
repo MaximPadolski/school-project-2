@@ -5,7 +5,11 @@
 }
 
 .questions {
+  height: 300px;
+  overflow-y: scroll;
   width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
 
   &_items {
     padding: 25px 50px;
@@ -29,36 +33,51 @@
 }
 
 .answers {
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
 
+.answers-container {
+  width: 48%;
+}
+
 .answer-box {
-  width: 45%;
+  // width: 48%;
+  padding: 5px;
+  height: 100%;
   min-height: 300px;
-  border: 2px dotted black;
+  border: 5px dotted #ccc;
   border-radius: 10px;
+  box-sizing: border-box;
 
   &_text {
-    padding: 20px 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #ccc;
     color: rgba(0, 0, 0, 0.87);
     box-sizing: border-box;
     background: white;
     font-size: 26px;
-  }
-
-  h2 {
-    text-align: center;
+    height: 50px;
   }
 }
 
 .example-list {
+  height: 100%;
   padding: 0 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 10px
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
 }
 
 
